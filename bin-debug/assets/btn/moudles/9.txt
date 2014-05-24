@@ -1,0 +1,2 @@
+[name="scrollBarThumb",'scaleGridTop="6",scaleGridLeft="6",scaleGridBottom="8",scaleGridRight="12"']
+[name="scrollBarThumbH",'scaleGridTop="6",scaleGridLeft="6",scaleGridBottom="12",scaleGridRight="8"']
