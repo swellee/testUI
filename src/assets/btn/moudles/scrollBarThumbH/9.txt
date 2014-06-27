@@ -1,0 +1,1 @@
+["all_same","scaleGridTop=6,scaleGridLeft=6,scaleGridBottom=12,scaleGridRight=8"]

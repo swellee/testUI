@@ -1,3 +1,3 @@
-[name="bg0",'scaleGridTop="55",scaleGridLeft="55",scaleGridBottom="64",scaleGridRight="65"']
-[name="bg1",'scaleGridTop="56",scaleGridLeft="55",scaleGridBottom="65",scaleGridRight="65"']
-[name="bg2",'scaleGridTop="20",scaleGridLeft="30",scaleGridBottom="40",scaleGridRight="40"']
+["bg0","scaleGridTop=55,scaleGridLeft=55,scaleGridBottom=64,scaleGridRight=65"]
+["bg1","scaleGridTop=56,scaleGridLeft=55,scaleGridBottom=65,scaleGridRight=65"]
+["bg2","scaleGridTop=20,scaleGridLeft=30,scaleGridBottom=40,scaleGridRight=40"]

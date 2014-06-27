@@ -1,6 +1,8 @@
 package
 {
 	
+	import flash.display.Bitmap;
+	import flash.display.BitmapData;
 	import flash.display.Sprite;
 	import flash.display.StageScaleMode;
 	import flash.events.Event;
@@ -35,13 +37,26 @@ package
 		private var ll:LList;
 
 		private var pp:LPane;
+		
+//		[Embed(source="assets/bg/common/bg0.png",scaleGridTop="55",scaleGridLeft="55",scaleGridBottom="64",scaleGridRight="65")]
+		[Embed(source="assets/bg/common/bg0.png",scaleGridTop=55,scaleGridLeft=55,scaleGridBottom=64,scaleGridRight=65)]
+//		[Embed(source="assets/bg/common/bg0.png")]
+		private const bg_bg0:Class;
 
 		private var win:LWindow;
 		public function testUI()
 		{
 //			stage.color=0x555555;
 			stage.scaleMode=StageScaleMode.NO_SCALE;
-			LUIManager.initAsStandard(stage,this,new TestStyleSheet());
+			LUIManager.initAsStandard(stage,this,new MyStyleSheet());
+			
+//			var bmd: Bitmap = new bg_bg0()as Bitmap;
+			
+//			bmd.width=300;
+//			bmd.height=200;
+//			addChild(bmd);
+//			trace(bmd is Bitmap)
+			
 			
 ////			
 //			var btn:LToggleButton=new LToggleButton("leeUI");

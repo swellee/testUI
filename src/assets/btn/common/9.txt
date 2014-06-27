@@ -1,5 +1,0 @@
-[name="generalRect",'scaleGridTop="7",scaleGridLeft="15",scaleGridBottom="17",scaleGridRight="18"']
-[name="generalTabHalf",'scaleGridTop="15",scaleGridLeft="12",scaleGridBottom="23",scaleGridRight="18"']
-[name="generalTabWhole",'scaleGridTop="10",scaleGridLeft="10",scaleGridBottom="16",scaleGridRight="14"']
-[name="milkRect",'scaleGridTop="5",scaleGridLeft="3",scaleGridBottom="20",scaleGridRight="27"']
-[name="upperLevelTab",'scaleGridTop="5",scaleGridLeft="6",scaleGridBottom="24",scaleGridRight="32"']
