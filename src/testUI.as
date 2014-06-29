@@ -16,6 +16,7 @@ package
 	import org.leui.components.LList;
 	import org.leui.components.LMenu;
 	import org.leui.components.LPane;
+	import org.leui.components.LText;
 	import org.leui.components.LWindow;
 	import org.leui.utils.LTrace;
 	import org.leui.utils.LUIManager;
@@ -57,6 +58,8 @@ package
 //			addChild(bmd);
 //			trace(bmd is Bitmap)
 			
+			var txx:LText =new LText();
+			addChild(txx);
 			
 ////			
 //			var btn:LToggleButton=new LToggleButton("leeUI");
