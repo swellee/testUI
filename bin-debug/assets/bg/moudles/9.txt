@@ -1,5 +1,0 @@
-["scrollbarBg","scaleGridTop=1,scaleGridLeft=7,scaleGridBottom=3,scaleGridRight=13"]
-["scrollbarBgH","scaleGridTop=7,scaleGridLeft=1,scaleGridBottom=13,scaleGridRight=3"]
-["titleBar","scaleGridTop=10,scaleGridLeft=38,scaleGridBottom=15,scaleGridRight=50"]
-["winTitle","scaleGridTop=37,scaleGridLeft=96,scaleGridBottom=40,scaleGridRight=214"]
-["wireFrame","scaleGridTop=8,scaleGridLeft=8,scaleGridBottom=14,scaleGridRight=12"]

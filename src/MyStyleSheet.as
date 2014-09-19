@@ -7,8 +7,10 @@ package
 	import org.leui.decorators.LCombineDecorator;
 	import org.leui.decorators.LDecorator;
 	import org.leui.decorators.LMultiStateDecorator;
+	import org.leui.utils.LeSpace;
 	import org.leui.vos.StyleVO;
-	
+
+	use namespace LeSpace;
 	/**
 	 *@author swellee
 	 *2014-5-29
@@ -40,6 +42,38 @@ package
 			paneSet.styleName="LPane";
 			paneSet.assetClass=Assets.bg_common_bg0;
 			paneSet.decoratorClass=LDecorator;
+			putStyleVO(paneSet);
+			
+			paneSet=new StyleVO();
+			paneSet.styleName="LList";
+			paneSet.assetClass=Assets.bg_common_bg3;
+			paneSet.decoratorClass=LDecorator;
+			putStyleVO(paneSet);
+			
+			paneSet=new StyleVO();
+			paneSet.styleName="LSeprator";
+			paneSet.assetClass=Assets.bg_moudles_separator;
+			paneSet.decoratorClass=LDecorator;
+			putStyleVO(paneSet);
+			
+			paneSet=new StyleVO();
+			paneSet.styleName="LSepratorV";
+			paneSet.assetClass=Assets.bg_moudles_separatorV;
+			paneSet.decoratorClass=LDecorator;
+			putStyleVO(paneSet);
+			
+			paneSet = paneSet.clone();
+			paneSet.styleName = "LGrid";
+			putStyleVO(paneSet);
+			
+			paneSet=new StyleVO();
+			paneSet.styleName="LBox";
+			paneSet.assetClass=Assets.bg_common_bg0;
+			paneSet.decoratorClass=LDecorator;
+			putStyleVO(paneSet);
+			
+			paneSet = paneSet.clone();
+			paneSet.styleName = "LTree";
 			putStyleVO(paneSet);
 			
 			paneSet=new StyleVO();
@@ -94,10 +128,30 @@ package
 			
 			var btnset:StyleVO=new StyleVO;
 			btnset.styleName="LButton";
+			btnset.user = "LButton,LToggleButton";
 			btnset.decoratorClass=LMultiStateDecorator;
 			btnset[LButton.BUTTON_STATE_MOUSE_OUT]="btnbg1";
 			btnset[LButton.BUTTON_STATE_MOUSE_OVER]="btnbg2";
 			btnset[LButton.BUTTON_STATE_MOUSE_DOWN]="btnbg3";
+			putStyleVO(btnset);
+			
+			
+			btnset=new StyleVO;
+			btnset.styleName="milkBtn";
+			btnset.user = "LButton,LToggleButton";
+			btnset.decoratorClass=LMultiStateDecorator;
+			btnset[LButton.BUTTON_STATE_MOUSE_OUT]="btn_common_milkRect_1";
+			btnset[LButton.BUTTON_STATE_MOUSE_OVER]="btn_common_milkRect_2";
+			btnset[LButton.BUTTON_STATE_MOUSE_DOWN]="btn_common_milkRect_3";
+			putStyleVO(btnset);
+			
+			btnset=new StyleVO;
+			btnset.styleName="upperTab";
+			btnset.user = "LButton,LToggleButton";
+			btnset.decoratorClass=LMultiStateDecorator;
+			btnset[LButton.BUTTON_STATE_MOUSE_OUT]="btn_common_upperLevelTab_1";
+			btnset[LButton.BUTTON_STATE_MOUSE_OVER]="btn_common_upperLevelTab_2";
+			btnset[LButton.BUTTON_STATE_MOUSE_DOWN]="btn_common_upperLevelTab_3";
 			putStyleVO(btnset);
 			
 			btnset=new StyleVO;
@@ -192,14 +246,16 @@ package
 			var stp:StyleVO=new StyleVO;
 			stp.styleName="LStepperV";
 			stp.decoratorClass=LCombineDecorator;
-			stp.ele_increase_btn="LButton";
+			stp.ele_increase_btn="btn_moudles_scrollBarUp";
+			stp.ele_decrease_btn="btn_moudles_scrollBarDown";
 			
 			putStyleVO(stp);
 			
 			stp=new StyleVO;
 			stp.styleName="LStepperH";
 			stp.decoratorClass=LCombineDecorator;
-			stp.ele_increase_btn="LButton";
+			stp.ele_increase_btn="btn_moudles_scrollBarRight";
+			stp.ele_decrease_btn="btn_moudles_scrollBarLeft";
 			
 			putStyleVO(stp);
 			
@@ -208,7 +264,7 @@ package
 			st.styleName="LTreeNode";
 			st.decoratorClass=LCombineDecorator;
 			st.ele_extra_btn="treeNodeExtraBtn";
-			st.ele_label_btn="";
+			st.ele_label_btn="LMenuItem";
 			putStyleVO(st);
 			
 			//scrollbar
@@ -223,6 +279,7 @@ package
 			
 			scrSet=new StyleVO;
 			scrSet.styleName="LScrollBarH";
+			scrSet.user = "LScrollBar";
 			scrSet.decoratorClass=LCombineDecorator;
 			scrSet.ele_bg="bg_moudles_scrollbarBgH";
 			scrSet.ele_slider="btn_moudles_scrollBarThumbH";
@@ -241,6 +298,7 @@ package
 			var set:StyleVO=new StyleVO;
 			set.styleName="LCombox";
 			set.decoratorClass=LCombineDecorator;
+			set.ele_btn = "btn_moudles_scrollBarDown";
 			
 			putStyleVO(set);
 			
