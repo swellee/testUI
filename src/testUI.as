@@ -131,28 +131,31 @@ package
 			//二级节点
 			var shaolinBook:LTreeNode = new LTreeNode("易筋经");
 			var shaolinBook2:LTreeNode = new LTreeNode("金钟罩");
-			shaolin.appendChildrenNode(shaolinBook,shaolinBook2);
+			shaolin.appendAll(shaolinBook,shaolinBook2);
 			
 			//一级节点
 			var wudang:LTreeNode = new LTreeNode("武当剑法");
 			//二级节点
 			var wudangBook:LTreeNode = new LTreeNode("流星剑");
 			var wudangBook2:LTreeNode = new LTreeNode("穿杨剑");
-			wudang.appendChildrenNode(wudangBook,wudangBook2);
+			wudang.appendAll(wudangBook,wudangBook2);
 			
 			//一级节点
 			var gaibang:LTreeNode = new LTreeNode("丐帮秘传");
 			//二级节点
 			var gaibangBook:LTreeNode = new LTreeNode("打狗棒");
-			gaibang.appendChildrenNode(gaibangBook);
+			gaibang.append(gaibangBook);
 			
 			//将一级节点添加到根节点
-			rootNode.appendChildrenNode(shaolin,wudang,gaibang);
+			rootNode.appendAll(shaolin,wudang,gaibang);
 			
 			//实例化一个树组件，传入根节点、设置布局间距、节点统一尺寸
 			var tree:LTree=new LTree(rootNode,10,4,100,24);
 			tree.setXY(6,10);
 			tree.setWH(100,300);
+			
+			
+//			return;
 			
 			//实例化一个分隔线
 			var sp:LSeprator = new LSeprator(false);
@@ -165,7 +168,8 @@ package
 			treeLabel.setWH(300,26);
 			treeLabel.setXY(110,5);
 			//为树添加选中节点时的回调函数
-			tree.listenSelectedNodeChange(onSelectNodeFun);
+//			tree.listenSelectedNodeChange(onSelectNodeFun);
+			tree.onSelectedChange(onSelectNodeFun);
 			//回调函数
 			function onSelectNodeFun():void
 			{
