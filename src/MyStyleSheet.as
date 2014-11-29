@@ -60,6 +60,7 @@ package
 			paneSet.styleName="LSepratorV";
 			paneSet.assetClass=Assets.bg_moudles_separatorV;
 			paneSet.decoratorClass=LDecorator;
+			paneSet.user = "LSeprator";
 			putStyleVO(paneSet);
 			
 			paneSet = paneSet.clone();
@@ -74,6 +75,7 @@ package
 			
 			paneSet = paneSet.clone();
 			paneSet.styleName = "LTree";
+			paneSet.assetClass = Assets.bg_common_bg3;
 			putStyleVO(paneSet);
 			
 			paneSet=new StyleVO();
