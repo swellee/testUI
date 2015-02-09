@@ -240,7 +240,7 @@ package
 			raidobtnSet.styleName="LRadioButton";
 			raidobtnSet.decoratorClass=LCombineDecorator;
 			raidobtnSet.ele_btn="";
-			raidobtnSet.ele_text="bg1";
+			raidobtnSet.ele_text="bg2";
 			
 			putStyleVO(raidobtnSet);
 			

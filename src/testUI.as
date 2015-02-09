@@ -1,23 +1,41 @@
 package
 {
 	
+	import flash.display.Bitmap;
+	import flash.display.BitmapData;
+	import flash.display.Graphics;
+	import flash.display.Shape;
 	import flash.display.Sprite;
+	import flash.display.StageScaleMode;
 	import flash.events.MouseEvent;
+	import flash.geom.Matrix;
+	import flash.geom.Rectangle;
 	
+	import org.leui.components.LBox;
 	import org.leui.components.LButton;
+	import org.leui.components.LCheckBox;
+	import org.leui.components.LComponent;
 	import org.leui.components.LGrid;
+	import org.leui.components.LList;
 	import org.leui.components.LMenu;
 	import org.leui.components.LPane;
+	import org.leui.components.LRadioButton;
+	import org.leui.components.LScrollBar;
 	import org.leui.components.LScrollPane;
 	import org.leui.components.LSeprator;
 	import org.leui.components.LText;
 	import org.leui.components.LTree;
 	import org.leui.components.LTreeNode;
 	import org.leui.components.LWindow;
+	import org.leui.events.MouseEvent;
 	import org.leui.utils.LTrace;
 	import org.leui.utils.LUIManager;
 	import org.leui.utils.LeSpace;
+	import org.leui.utils.UiConst;
 	import org.leui.vos.MenuItemVO;
+	
+	import starling.core.Starling;
+	import starling.events.Event;
 
 
 	use namespace LeSpace;
@@ -32,20 +50,41 @@ package
 		public var lib:MyStyleSheet;
 
 		private var scrPane:LScrollPane;
+		private var mStarling:Starling;
 		public function testUI()
 		{
 //			stage.color=0x555555;
-//			stage.scaleMode=StageScaleMode.NO_SCALE;
-			
-			LUIManager.initAsStandard(stage,this,new MyStyleSheet());
+			this.stage.scaleMode=StageScaleMode.NO_SCALE;
 			
 			
-//			var comp:LComponent = new LComponent();
-//			comp.style = "bg_common_bg1";
-//			comp.setWH(60,40);
-//			comp.setXY(20,30);
-//			addChild(comp);
+			mStarling = new Starling(Game,stage);
+			mStarling.start();
 			
+			mStarling.addEventListener(Event.ROOT_CREATED,initUI);
+			
+			return;
+			
+			var s:Shape = new Shape();
+			var g:Graphics = s.graphics;
+			g.clear();
+			g.beginFill(0);
+			g.drawRoundRect(0,0,40,40,10,10);
+			g.endFill();
+			s.scale9Grid = new Rectangle(11,11,28,28);
+			s.width = 100;
+			s.height = 100;
+			var c:Sprite = new Sprite();
+			c.addChild(s);
+			var bmd:BitmapData = new BitmapData(100,100,true,0);
+			bmd.draw(c);
+			
+			var bmp:Bitmap = new Bitmap(bmd);
+			bmp.scale9Grid = s.scale9Grid;
+			bmp.width = 100;
+			bmp.height = 100;
+			addChild(bmp);
+			
+			return;
 			
 			
 //			var pane:LPane = new LPane();
@@ -303,7 +342,7 @@ package
 			
 			var btn:LButton = new LButton("click me");
 			btn.setXY(30,40);
-			addChild(btn);
+//			addChild(btn);
 			
 			var menu:LMenu=LMenu.createMenu(btn,datas,true,menuCallFun);
 			
@@ -369,11 +408,42 @@ package
 //			pp.addEventListener(MouseEvent.CLICK,onClickHandler);
 		}
 		
-		protected function onClickHandler(event:MouseEvent):void
+		private function initUI():void
+		{
+//			var uiContainer:Game = new Game();
+//			mStarling.stage.addChild(uiContainer
+			LUIManager.initAsStandard(mStarling,mStarling.stage,new MyStyleSheet());
+			
+//			var comp:LButton = new LButton("button");
+//			comp.setWH(70,30);
+//			var comp:LWindow = new LWindow("hwehwhe");
+//			comp.show();
+//			var comp:LRadioButton = new LRadioButton("xxx");
+			var comp:LScrollBar = new LScrollBar();
+			comp.setWH(30,100);
+//			var  comp:LBox = new LBox(4);
+//			comp.direction = UiConst.HORIZONTAL;
+//			comp.style = "bg2";
+//			var btn:LButton = new LButton();
+//			btn.canScaleX = btn.canScaleY = false;
+////			comp.append(btn);
+//			comp.appendAll(btn,new LText("sdsds"));
+//			comp.setWH(90,50);
+			
+//			mStarling.stage.addChild(comp);
+			
+			comp.addEventListener(org.leui.events.MouseEvent.CLICK,onClickHandler);
+		}
+		
+		protected function onClickHandler(event:org.leui.events.MouseEvent):void
 		{
 			// TODO Auto-generated method stub
-			scrPane.setWH(200+Math.random()*100,150+Math.random()*50);
-			scrPane.addChild(new Sprite());
+//			scrPane.setWH(200+Math.random()*100,150+Math.random()*50);
+//			scrPane.addChild(new Sprite());
+//			LComponent(event.target).setWH(90,70);
+//			var rd:LRadioButton = event.target as LRadioButton;
+//			if(rd)rd.setWH(90,70);
+			
 		}		
 		
 	}
